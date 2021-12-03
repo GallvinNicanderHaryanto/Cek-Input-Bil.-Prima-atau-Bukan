@@ -1,0 +1,35 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		bool back = true;
+		while(back){
+		int bil, ulang, sisa, jumlahbilangan;
+		string ket;
+		Console.Write("Cek Input Bilangan Prima Atau Bukan");
+		Console.WriteLine();
+		Console.WriteLine();
+		Console.Write("Masukan Bilangan = ");
+		bil = Convert.ToInt16(Console.ReadLine());
+		jumlahbilangan=0;
+		for (ulang = 1; ulang <= bil; ulang++){
+		sisa = bil % ulang;
+		if (sisa == 0)
+		jumlahbilangan = jumlahbilangan + 1;
+		else
+		jumlahbilangan = jumlahbilangan ;}
+		if (jumlahbilangan > 2)
+		ket = "Bukan Bilangan Prima";
+		else
+		ket = "Bilangan Prima";
+		Console.WriteLine("Bilangan Yang Diinput = " + ket);
+        Console.WriteLine("");
+		Console.WriteLine("Apakah Ingin Mengulangi Lagi?(T/Y) : ");
+		String isKembali = Console.ReadLine();
+		Console.WriteLine("");
+		back = isKembali == "Y" || isKembali == "y";
+		}
+	}
+}
